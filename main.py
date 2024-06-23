@@ -31,6 +31,8 @@ while run:
     
     clock.tick(FPS)
     
+    first_enemy.enemy_move()
+    
     #draw group 
     enemy_group.draw(screen)
     

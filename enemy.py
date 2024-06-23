@@ -6,3 +6,6 @@ class Enemy(pygame.sprite.Sprite):
         self.image = image
         self.rect = self.image.get_rect()
         self.rect.center = pos
+        
+    def enemy_move(self):
+        self.rect.x = self.rect.x + 1
