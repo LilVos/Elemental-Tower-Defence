@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+from enemy import *
 
 #initalize pygame
 pygame.init()
@@ -13,7 +14,16 @@ pygame.display.set_caption("Elemental Tower Defence")
 
 #load images
 
-enemy_image = pygame.image.load("C:\Users\User\Desktop\PYTHON\Elemantal Tower Defense\Elemental-Tower-Defence\ASSESTS\images.jpeg").convert_alpha()
+enemy_image = pygame.image.load(r"C:\Users\User\Desktop\PYTHON\Elemantal Tower Defense\Elemental-Tower-Defence\ASSESTS\images.png").convert_alpha()
+
+#create group
+
+enemy_group = pygame.sprite.Group()
+
+first_enemy = Enemy((200,300), enemy_image)
+enemy_group.add(first_enemy)
+
+print(first_enemy)
 
 # game loop
 run = True
@@ -21,9 +31,16 @@ while run:
     
     clock.tick(FPS)
     
+    #draw group 
+    enemy_group.draw(screen)
+    
     for event in pygame.event.get():
         #quit
         if event.type == pygame.QUIT:
             run = False
+            
+    #Update Display
+    pygame.display.flip()
+
 
 pygame.quit()
