@@ -11,7 +11,9 @@ clock = pygame.time.Clock()
 screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
 pygame.display.set_caption("Elemental Tower Defence")
 
-#game loop
+#load images
+
+enemy_image = pygame.image.load("C:\Users\User\Desktop\PYTHON\Elemantal Tower Defense\Elemental-Tower-Defence\ASSESTS\images.jpeg").convert_alpha()
 
 # game loop
 run = True
