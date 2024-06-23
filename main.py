@@ -9,6 +9,9 @@ clock = pygame.time.Clock()
 
 #create game window
 screen = pygame.display.set_mode((SCREEN_WIDTH,SCREEN_HEIGHT))
+pygame.display.set_caption("Elemental Tower Defence")
+
+#game loop
 
 # game loop
 run = True
