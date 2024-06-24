@@ -20,7 +20,7 @@ enemy_image = pygame.image.load(r"C:\Users\User\Desktop\PYTHON\Elemantal Tower D
 
 enemy_group = pygame.sprite.Group()
 
-waypoints = [(100,100),(400,200),(400,100),(200,300)]
+waypoints = [(100,100),(400,200),(400,100),(200,300),(700,700)]
 
 first_enemy = Enemy(waypoints, enemy_image)
 enemy_group.add(first_enemy)
