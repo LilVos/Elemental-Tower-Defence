@@ -20,7 +20,9 @@ enemy_image = pygame.image.load(r"C:\Users\User\Desktop\PYTHON\Elemantal Tower D
 
 enemy_group = pygame.sprite.Group()
 
-first_enemy = Enemy((200,300), enemy_image)
+waypoints = [(100,100),(400,200),(400,100),(200,300)]
+
+first_enemy = Enemy(waypoints, enemy_image)
 enemy_group.add(first_enemy)
 
 print(first_enemy)
@@ -30,6 +32,12 @@ run = True
 while run:
     
     clock.tick(FPS)
+    
+    screen.fill("grey100")
+    
+    #draw enemy path
+    
+    pygame.draw.lines(screen, "BLACK", False, waypoints)
     
     for first_enemy in enemy_group:
         first_enemy.enemy_move()
